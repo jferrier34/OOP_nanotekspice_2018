@@ -5,31 +5,33 @@
 ** 4069
 */
 
-nts::Component2716::Component2716(std::string const &value)
+#include "../../include/4069.hpp"
+
+nts::Component4069::Component4069(std::string const &value)
 {
         (void)value;
 }
 
-nts::Component2716::~Component2716()
+nts::Component4069::~Component4069()
 {
 }
 
-nts::Tristate Component2716::Compute(size_t pin_num = 1)
+nts::Tristate Component4069::Compute(size_t pin_num = 1)
 {
         (void)pin_num;
         return (nts::Tristate::UNDEFINED);
 
-void Component2716::SetLink(size_t pin_num, nts::Icomponent &component, size_t pin_num_target)
+void Component4069::SetLink(size_t pin_num, nts::Icomponent &component, size_t pin_num_target)
 {
         (void)pin_num;
         (void)component;
         (void)pin_num_target;
 }
 
-void Component2716::Dump(void) const
+void Component4069::Dump(void) const
 {
     int i = 1;
-    std::cout << "This the chipset 2716" << std::endl;
+    std::cout << "This the chipset 4069" << std::endl;
 
     while (i < 14) {
         ++i;

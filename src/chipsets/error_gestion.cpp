@@ -5,20 +5,26 @@
 ** error_gestion
 */
 
-error_endler(int argc, char **argv)
+
+#include <stdlib.h>
+#include <iostream>
+#include <string.h>
+#include <fstream>
+
+void error_endler(int ac, char **av)
 {
-    if (argc < 2)
+    if (ac < 2)
         exit(84);
-    std::string tmp(argv[1])
+    std::string tmp(av[1]);
     std::ifstream file;
-    file.open(argv[1]);
+    file.open(av[1]);
     if (!file.is_open())
         exit(84);
     if (tmp.substr(tmp.find_last_of(".") + 1) != "nts")
         exit (84);
 }
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-    error_endler(argc, argv)
+    error_endler(ac, av);
 }
